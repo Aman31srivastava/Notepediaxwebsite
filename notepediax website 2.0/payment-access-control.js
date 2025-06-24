@@ -1,0 +1,1 @@
+/* Payment and access control script disabled as per user request. */

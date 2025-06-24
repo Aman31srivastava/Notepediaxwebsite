@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotepediaX - Video Lectures</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">NotepediaX</div>
+        <ul class="nav-links">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="enotes.html">E-Notes</a></li>
+            <li><a href="youtube.html" class="active">Video Lectures</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html" class="active">Contact Us</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="video-search" placeholder="Search videos...">
+            <button onclick="searchVideos()">Search</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="videos-section">
+        <h2 class="section-title">Free Video Lectures</h2>
+        
+        <!-- Search Results Section -->
+        <div id="search-results" class="search-results">
+            <!-- Results will appear here -->
+        </div>
+
+        <!-- Engineering Videos -->
+        <div class="video-category">
+            <h3 class="category-title">Engineering Entrance</h3>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="JEE Main Physics">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <h4>JEE Main Physics - Complete Course</h4>
+                    <p>Full syllabus coverage with problem solving</p>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" class="btn">Watch Now</a>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="JEE Advanced Maths">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <h4>JEE Advanced Maths - Advanced Concepts</h4>
+                    <p>Problem solving techniques and shortcuts</p>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" class="btn">Watch Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medical Videos -->
+        <div class="video-category">
+            <h3 class="category-title">Medical Entrance</h3>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="NEET Biology">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <h4>NEET Biology - Complete Syllabus</h4>
+                    <p>Detailed explanations with diagrams</p>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" class="btn">Watch Now</a>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="NEET Chemistry">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <h4>NEET Chemistry - Organic Chemistry</h4>
+                    <p>Reaction mechanisms and named reactions</p>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" class="btn">Watch Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- School Videos -->
+        <div class="video-category">
+            <h3 class="category-title">School Level</h3>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="Class 10 Maths">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <h4>Class 10 Maths - Board Preparation</h4>
+                    <p>Important questions and solutions</p>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" class="btn">Watch Now</a>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="Class 12 Physics">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <h4>Class 12 Physics - Electrostatics</h4>
+                    <p>Complete chapter with derivations</p>
+                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" class="btn">Watch Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Sample video data
+        const videos = [
+            { 
+                title: "JEE Main Physics - Complete Course", 
+                category: "Engineering", 
+                description: "Full syllabus coverage with problem solving",
+                url: "https://youtu.be/dQw4w9WgXcQ",
+                thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg"
+            },
+            { 
+                title: "JEE Advanced Maths - Advanced Concepts", 
+                category: "Engineering", 
+                description: "Problem solving techniques and shortcuts",
+                url: "https://youtu.be/dQw4w9WgXcQ",
+                thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg"
+            },
+            { 
+                title: "NEET Biology - Complete Syllabus", 
+                category: "Medical", 
+                description: "Detailed explanations with diagrams",
+                url: "https://youtu.be/dQw4w9WgXcQ",
+                thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg"
+            },
+            { 
+                title: "NEET Chemistry - Organic Chemistry", 
+                category: "Medical", 
+                description: "Reaction mechanisms and named reactions",
+                url: "https://youtu.be/dQw4w9WgXcQ",
+                thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg"
+            },
+            { 
+                title: "Class 10 Maths - Board Preparation", 
+                category: "School", 
+                description: "Important questions and solutions",
+                url: "https://youtu.be/dQw4w9WgXcQ",
+                thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg"
+            },
+            { 
+                title: "Class 12 Physics - Electrostatics", 
+                category: "School", 
+                description: "Complete chapter with derivations",
+                url: "https://youtu.be/dQw4w9WgXcQ",
+                thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg"
+            }
+        ];
+
+        function searchVideos() {
+            const searchTerm = document.getElementById('video-search').value.toLowerCase();
+            const resultsContainer = document.getElementById('search-results');
+            
+            // Clear previous results
+            resultsContainer.innerHTML = '';
+            
+            if (searchTerm.trim() === '') {
+                resultsContainer.style.display = 'none';
+                return;
+            }
+
+            const filteredVideos = videos.filter(video => 
+                video.title.toLowerCase().includes(searchTerm) ||
+                video.category.toLowerCase().includes(searchTerm) ||
+                video.description.toLowerCase().includes(searchTerm)
+            );
+
+            if (filteredVideos.length > 0) {
+                resultsContainer.style.display = 'block';
+                filteredVideos.forEach(video => {
+                    const videoElement = document.createElement('div');
+                    videoElement.className = 'search-result-item';
+                    videoElement.innerHTML = `
+                        <div class="video-result">
+                            <img src="${video.thumbnail}" alt="${video.title}" class="result-thumbnail">
+                            <div class="result-info">
+                                <h4>${video.title}</h4>
+                                <p>${video.description}</p>
+                                <a href="${video.url}" target="_blank" class="btn small-btn">Watch Now</a>
+                            </div>
+                        </div>
+                    `;
+                    resultsContainer.appendChild(videoElement);
+                });
+            } else {
+                resultsContainer.style.display = 'block';
+                resultsContainer.innerHTML = '<p>No videos found matching your search.</p>';
+            }
+        }
+
+        // Allow search on Enter key
+        document.getElementById('video-search').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchVideos();
+            }
+        });
+    </script>
+</body>
+</html>

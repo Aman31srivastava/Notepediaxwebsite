@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotepediaX - E-Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">NotepediaX</div>
+        <ul class="nav-links">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="enotes.html" class="active">E-Notes</a></li>
+            <li><a href="youtube.html">Video Lectures</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html" class="active">Contact Us</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Search notes...">
+            <button>Search</button>
+        </div>
+    </nav>
+    <hr>
+    <!-- Free Notes Section -->
+    <section class="notes-section">
+        <h2 class="section-title">Free Notes</h2>
+        
+        <div class="category-tabs">
+            <button class="tab-btn active" onclick="openCategory(event, 'free-classes')">Classes</button>
+            <button class="tab-btn" onclick="openCategory(event, 'free-exams')">Exams</button>
+        </div>
+
+        <div id="free-classes" class="tab-content active">
+            <div class="notes-grid">
+                <div class="note-card">
+                    <i class="fas fa-book fa-3x"></i>
+                    <h3>Class 9 Science</h3>
+                    <p>Complete NCERT notes with diagrams and examples</p>
+                    <a href="#" class="btn">Download</a>
+                </div>
+                <div class="note-card">
+                    <i class="fas fa-calculator fa-3x"></i>
+                    <h3>Class 10 Maths</h3>
+                    <p>Chapter-wise notes with solved problems</p>
+                    <a href="#" class="btn">Download</a>
+                </div>
+                <div class="note-card">
+                    <i class="fas fa-flask fa-3x"></i>
+                    <h3>Class 11 Chemistry</h3>
+                    <p>Detailed notes with chemical equations</p>
+                    <a href="#" class="btn">Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="free-exams" class="tab-content">
+            <div class="notes-grid">
+                <div class="note-card">
+                    <i class="fas fa-atom fa-3x"></i>
+                    <h3>JEE Physics</h3>
+                    <p>Important concepts and formulas</p>
+                    <a href="#" class="btn">Download</a>
+                </div>
+                <div class="note-card">
+                    <i class="fas fa-stethoscope fa-3x"></i>
+                    <h3>NEET Biology</h3>
+                    <p>Diagrams and key points</p>
+                    <a href="#" class="btn">Download</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- Paid Notes Section -->
+    <section class="notes-section premium">
+        <h2 class="section-title">Premium Notes</h2>
+        
+        <div class="category-tabs">
+            <button class="tab-btn active" onclick="openCategory(event, 'paid-classes')">Classes</button>
+            <button class="tab-btn" onclick="openCategory(event, 'paid-exams')">Exams</button>
+        </div>
+
+        <div id="paid-classes" class="tab-content active">
+            <div class="notes-grid">
+                <div class="note-card">
+                    <i class="fas fa-brain fa-3x"></i>
+                    <h3>Class 12 Physics</h3>
+                    <p>Advanced concepts with derivations</p>
+                    <div class="premium-options">
+                        <a href="#" class="btn sample-btn">Sample (Free)</a>
+                        <div class="price-tag">₹499</div>
+                        <a href="#" class="btn premium-btn">Buy Now</a>
+                    </div>
+                </div>
+                <div class="note-card">
+                    <i class="fas fa-dna fa-3x"></i>
+                    <h3>Class 12 Biology</h3>
+                    <p>Detailed diagrams and explanations</p>
+                    <div class="premium-options">
+                        <a href="#" class="btn sample-btn">Sample (Free)</a>
+                        <div class="price-tag">₹499</div>
+                        <a href="#" class="btn premium-btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="paid-exams" class="tab-content">
+            <div class="notes-grid">
+                <div class="note-card">
+                    <i class="fas fa-chart-line fa-3x"></i>
+                    <h3>JEE Advanced</h3>
+                    <p>Problem solving techniques</p>
+                    <div class="premium-options">
+                        <a href="#" class="btn sample-btn">Sample (Free)</a>
+                        <div class="price-tag">₹799</div>
+                        <a href="#" class="btn premium-btn">Buy Now</a>
+                    </div>
+                </div>
+                <div class="note-card">
+                    <i class="fas fa-microscope fa-3x"></i>
+                    <h3>NEET Advanced</h3>
+                    <p>High yield topics</p>
+                    <div class="premium-options">
+                        <a href="#" class="btn sample-btn">Sample (Free)</a>
+                        <div class="price-tag">₹799</div>
+                        <a href="#" class="btn premium-btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Footer -->
+<div class="footer-content">
+    <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="enotes.html">E-Notes</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email:  notepediax@gmail.com</p>
+        <p>Phone: +91 987xxxxxx</p>
+    </div>
+    <div class="footer-section">
+        <h3>Legal</h3>
+        <ul>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+            <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>&copy; 202 NotepediaX. All rights reserved.</p>
+</div>
+</footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize first tab as active
+            const defaultTab = document.querySelector('.category-tabs .tab-btn.active');
+            if (defaultTab) {
+                const defaultTabContent = document.getElementById(defaultTab.getAttribute('onclick').match(/'([^']+)'/)[1]);
+                defaultTabContent.classList.add('active');
+            }
+
+            // Set up tab switching
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const tabContents = document.querySelectorAll('.tab-content');
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    const tabButtons = document.querySelectorAll('.tab-btn');
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    const categoryName = e.target.getAttribute('onclick').match(/'([^']+)'/)[1];
+                    document.getElementById(categoryName).classList.add('active');
+                    e.target.classList.add('active');
+                });
+            });
+
+            // Make note cards clickable and show specific notes
+            const noteCards = document.querySelectorAll('.note-card');
+            noteCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    if (!e.target.classList.contains('btn') && !e.target.classList.contains('price-tag')) {
+                        const noteTitle = card.querySelector('h3').textContent;
+                        const noteType = card.closest('.tab-content').id.includes('classes') ? 'Class' : 'Exam';
+                        
+                        // In a real implementation, this would load specific notes
+                        // For now we'll show an alert with the selected note
+                        alert(`Loading ${noteType} notes: ${noteTitle}`);
+                        
+                        // You would replace this with actual note loading logic:
+                        // window.location.href = `notes/${noteType.toLowerCase()}/${encodeURIComponent(noteTitle)}.html`;
+                    }
+                });
+                card.style.cursor = 'pointer';
+            });
+        });
+
+        function openCategory(evt, categoryName) {
+            // Hide all tab content
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+
+            // Remove active class from all buttons
+            const tabButtons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+
+            // Show current tab and mark button as active
+            document.getElementById(categoryName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>

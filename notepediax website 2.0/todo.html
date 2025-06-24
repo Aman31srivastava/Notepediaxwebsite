@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotepediaX - Student Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">NotepediaX</div>
+        <ul class="nav-links">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="todo.html" class="active">Todo List</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="enotes.html">E-Notes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Todo List Section -->
+    <section class="todo-section">
+        <div class="todo-container">
+            <h2>My Study Goals</h2>
+            <div class="todo-form">
+                <input type="text" id="todoInput" placeholder="Add a new task...">
+                <button id="addBtn"><i class="fas fa-plus"></i> Add</button>
+            </div>
+            <div class="todo-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <ul class="todo-list" id="todoList">
+                <!-- Tasks will be added here dynamically -->
+            </ul>
+            <div class="todo-stats">
+                <span id="remainingCount">0</span> tasks remaining
+                <button id="clearCompleted">Clear Completed</button>
+            </div>
+        </div>
+    </section>
+<BR>
+    <HR>
+    <!-- Footer -->
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="enotes.html">E-Notes</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: contact@notepediax.com</p>
+            <p>Phone: +91 9876543210</p>
+        </div>
+        <div class="footer-section">
+            <h3>Legal</h3>
+            <ul>
+                <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 NotepediaX. All rights reserved.</p>
+    </div>
+</footer>
+
+
+    <script src="todo.js"></script>
+</body>
+</html>

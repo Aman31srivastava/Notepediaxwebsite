@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotepediaX - Courses</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">NotepediaX</div>
+        <ul class="nav-links">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="courses.html" class="active">Courses</a></li>
+            <li><a href="enotes.html">E-Notes</a></li>
+            <li><a href="youtube.html">Video Lectures</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="course-search" placeholder="Search courses...">
+            <button onclick="searchCourses()">Search</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="courses-section">
+        <h2 class="section-title">Explore Our Courses</h2>
+        
+        <!-- Search Results Section -->
+        <div id="search-results" class="search-results">
+            <!-- Results will appear here -->
+        </div>
+
+        <!-- Engineering Courses -->
+        <div class="course-category">
+            <h3 class="category-title">Engineering Entrance</h3>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <i class="fas fa-atom fa-3x"></i>
+                    <h4>JEE Main Complete Course</h4>
+                    <p>Comprehensive preparation for JEE Main</p>
+                    <div class="course-meta">
+                        <span class="duration"><i class="far fa-clock"></i> 6 Months</span>
+                        <span class="price">₹9999</span>
+                    </div>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+                <div class="course-card">
+                    <i class="fas fa-calculator fa-3x"></i>
+                    <h4>JEE Advanced Crash Course</h4>
+                    <p>Advanced problem solving techniques</p>
+                    <div class="course-meta">
+                        <span class="duration"><i class="far fa-clock"></i> 3 Months</span>
+                        <span class="price">₹7999</span>
+                    </div>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medical Courses -->
+        <div class="course-category">
+            <h3 class="category-title">Medical Entrance</h3>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <i class="fas fa-stethoscope fa-3x"></i>
+                    <h4>NEET UG Complete Course</h4>
+                    <p>Full syllabus coverage for NEET</p>
+                    <div class="course-meta">
+                        <span class="duration"><i class="far fa-clock"></i> 6 Months</span>
+                        <span class="price">₹8999</span>
+                    </div>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+                <div class="course-card">
+                    <i class="fas fa-dna fa-3x"></i>
+                    <h4>NEET Biology Mastery</h4>
+                    <p>Focus on Biology concepts</p>
+                    <div class="course-meta">
+                        <span class="duration"><i class="far fa-clock"></i> 2 Months</span>
+                        <span class="price">₹4999</span>
+                    </div>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- School Courses -->
+        <div class="course-category">
+            <h3 class="category-title">School Level</h3>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <i class="fas fa-book fa-3x"></i>
+                    <h4>Class 10 Board Preparation</h4>
+                    <p>Complete CBSE/State Board syllabus</p>
+                    <div class="course-meta">
+                        <span class="duration"><i class="far fa-clock"></i> 4 Months</span>
+                        <span class="price">₹5999</span>
+                    </div>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+                <div class="course-card">
+                    <i class="fas fa-flask fa-3x"></i>
+                    <h4>Class 12 Science Stream</h4>
+                    <p>Physics, Chemistry, Mathematics</p>
+                    <div class="course-meta">
+                        <span class="duration"><i class="far fa-clock"></i> 8 Months</span>
+                        <span class="price">₹10999</span>
+                    </div>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="enotes.html">E-Notes</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: contact@notepediax.com</p>
+            <p>Phone: +91 9876543210</p>
+        </div>
+        <div class="footer-section">
+            <h3>Legal</h3>
+            <ul>
+                <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 202 NotepediaX. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script>
+        // Sample course data
+        const courses = [
+            { title: "JEE Main Complete Course", category: "Engineering", duration: "6 Months", price: "₹9999" },
+            { title: "JEE Advanced Crash Course", category: "Engineering", duration: "3 Months", price: "₹7999" },
+            { title: "NEET UG Complete Course", category: "Medical", duration: "6 Months", price: "₹8999" },
+            { title: "NEET Biology Mastery", category: "Medical", duration: "2 Months", price: "₹4999" },
+            { title: "Class 10 Board Preparation", category: "School", duration: "4 Months", price: "₹5999" },
+            { title: "Class 12 Science Stream", category: "School", duration: "8 Months", price: "₹10999" }
+        ];
+
+        function searchCourses() {
+            const searchTerm = document.getElementById('course-search').value.toLowerCase();
+            const resultsContainer = document.getElementById('search-results');
+            
+            // Clear previous results
+            resultsContainer.innerHTML = '';
+            
+            if (searchTerm.trim() === '') {
+                resultsContainer.style.display = 'none';
+                return;
+            }
+
+            const filteredCourses = courses.filter(course => 
+                course.title.toLowerCase().includes(searchTerm) ||
+                course.category.toLowerCase().includes(searchTerm)
+            );
+
+            if (filteredCourses.length > 0) {
+                resultsContainer.style.display = 'block';
+                filteredCourses.forEach(course => {
+                    const courseElement = document.createElement('div');
+                    courseElement.className = 'search-result-item';
+                    courseElement.innerHTML = `
+                        <h4>${course.title}</h4>
+                        <p>${course.category} • ${course.duration} • ${course.price}</p>
+                        <a href="#" class="btn small-btn">View Details</a>
+                    `;
+                    resultsContainer.appendChild(courseElement);
+                });
+            } else {
+                resultsContainer.style.display = 'block';
+                resultsContainer.innerHTML = '<p>No courses found matching your search.</p>';
+            }
+        }
+
+        // Allow search on Enter key
+        document.getElementById('course-search').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchCourses();
+            }
+        });
+    </script>
+</body>
+</html>
